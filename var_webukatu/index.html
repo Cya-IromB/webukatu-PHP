@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>ユーザー登録</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+  <body>
+    <h1>ユーザー登録</h1>
+
+    <form action="_valid.php">
+      <label for="email">
+        <p>email: <span class="description">例: xxxx@gmail.com </span><span class="js-Error" id="er-email"></span></p>
+        <input type="text" name="email" id="email">
+      </label>
+
+      <label for="password">
+        <p>password <span class="description">半角英数字かつ6文字以上 </span><span class="js-Error" id="er-password"></span></p>
+        <input type="password" name="password" id="password" placeholder="パスワード">
+      </label>
+
+      <label for="password-retype">
+        <p>password(再入力) <span class="description">*確認用です </span><span class="js-Error" id="er-password-retype"></span></p>
+        <input type="password" name="password" id="password-retype" placeholder="パスワード再入力">
+      </label>
+
+      <input type="submit" value="送信">
+    </form>
+
+    <a href=""></a>
+
+  </body>
+</html>
