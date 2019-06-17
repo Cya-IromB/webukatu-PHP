@@ -1,3 +1,10 @@
+<?php
+  error_reporting(E_ALL); //E_STRICTレベル以外のエラーを報告
+  ini_set('display_errors','On'); //エラー表示させるかどうか
+
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -8,9 +15,15 @@
   </head>
 
   <body>
-    <p>あなたのメールアドレスは <?php  ?> です。 </p>
-    <p>あなたのパスワードは <?php  ?> です。</p>
-    <a href="index.html">ユーザー登録へ戻る</a>
+    <?php if(!empty($_SESSION['login'])): ?>
+      <section>
+        <p>あなたのメールアドレスは <?php echo 'あっはん'; ?> です。 </p>
+        <p>あなたのパスワードは <?php echo 'うっふん'; ?> です。</p>
+        <a href="index.php">ユーザー登録へ戻る</a>
+      </section>
 
+    <?php else: ?>
+      <p>ログインしていなければ見ることができません。</p>
+    <?php endif; ?>
   </body>
 </html>

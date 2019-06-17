@@ -1,6 +1,11 @@
 body{
   margin: auto;
-  padding: 150px;
-  width: 25%;
+  padding: 100px;
+  width: 75%;
   background: #fbfbfa;
+}
+
+.js-error{
+  font-size: 8px;
+  color: #f88;
 }
