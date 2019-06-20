@@ -54,7 +54,7 @@
     //すべて大丈夫なら遷移
     if($isSuccess){
       //DB接続準備
-      $dsn = 'mysql:dbname=oredb;host=localhost;charset=utf8';
+      $dsn = 'mysql:dbname=oredb;host=localhost;charset=utf8mb4';
       $user = 'root';
       $adminPassword = 'yamazato27';
       $options = array(
@@ -77,8 +77,6 @@
       $stmt->execute(array(':email' => $_POST['email'], ':password' => $_POST['password'], ':login_time' => date('Y-m-d h:i:s')));
 
       header("Location:mypage.php");
-
-
     }
   }
 
